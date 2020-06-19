@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import OpenApi from "./App";
+import OpenApi from "./OpenApi";
 
 class App extends Component {
     render() {

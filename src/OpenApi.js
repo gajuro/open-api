@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default class OpenApi extends React.Component {
     state = {
-        results: []
+        result: []
     };
 
     componentDidMount() {
@@ -14,17 +14,20 @@ export default class OpenApi extends React.Component {
                 'X-Api-Key': 's7jB75sZzXkUCeFxv9Mx3G-macoXzWSzeyha3hAxxJ1cfxeX1A'
             }
         })
-            .then(res => {
-                const results = res.data;
-                console.log({res, results});
-                this.setState({ results })
-            });
+        .then(res => {
+            const result = res.data;
+            console.log({res, result});
+            this.setState({ result })
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
     }
+    
     render() {
         return (
             <ul>
-                {this.state.results.map(result =>
-                    <li>{result}</li>)}
+                {this.state.result.denumire}
             </ul>
         )
     }

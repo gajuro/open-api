@@ -9,7 +9,7 @@ export default class OpenApi extends React.Component {
     componentDidMount() {
         axios({
             method: 'get',
-            url: 'https://api.openapi.ro/api/companies/13548146',
+            url: `https://api.openapi.ro/api/companies/${'13548146'}`,
             headers: {
                 'X-Api-Key': 's7jB75sZzXkUCeFxv9Mx3G-macoXzWSzeyha3hAxxJ1cfxeX1A'
             }
